@@ -1,0 +1,30 @@
+\documentclass {article}
+\usepackage {ctex}
+\usepackage{amsmath}% For the equation* environment
+\usepackage[dvips]{graphicx}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+\begin{document}
+\section{An overpowered trick for infinite series}
+\href{https://www.youtube.com/watch?v=gd7FmQAVNmk}{An overpowered trick for infinite series}
+
+Problem \[ \sum_{k \ge 1} \frac{1}{k^{2} + \alpha^{2}} \]
+
+Problem \[ \sum_{k \ge 1} \frac{\left (-1\right)^k}{k^{2} + \alpha^{2}}\]
+
+Problem \[ \sum_{k \ge 1} \frac{1}{\left(k^{2} + \alpha^{2}\right)^2}\]
+
+
+\section{The Dirichlet Integral is destroyed by Feynman's Trick}
+\href{https://www.youtube.com/watch?v=ZZccxuOpb4k}{The Dirichlet Integral is destroyed by Feynman's Trick}
+
+Problem \[ \int_{0}^{\infty} \frac {sin\left(x\right)}{x} {d}x \]
+
+suppose \[ F\left(s\right) = \int_{0}^{\infty} e^{-sx}\frac{sin(x)}{x} {d}x\]  
+\[
+\begin{matrix}
+ F^{'}(s)  & = \int_{0}^{\infty} \frac{\partial}{\partial{s}} e^{-sx}\frac{sin(x)}{x} {d}x  \\
+           & = \int_{0}^{\infty} -xe^{-sx} \frac{sin(x)}{x} {d}x  \\
+           & = \int_{0}^{\infty} -e^{-sx} sin(x) {d}x 
+\end{matrix}
+\]
+\end{document}
