@@ -1,0 +1,46 @@
+\documentclass {article}
+\usepackage {ctex}
+\usepackage{amsmath}% For the equation* environment
+\usepackage[dvips]{graphicx}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+\begin{document}
+\section{a very interesting differential equation}
+\href{https://www.youtube.com/watch?v=tr7NZ71LFKA}{a very interesting differential equation}
+
+
+Problem  \[ y^{'''} = y^{'}y^{''}\]
+
+suppose 
+\[
+\begin{matrix}
+    & y^{'''}  = y^{'}y^{''} \\
+     \stackrel {z = y^{'}}{\implies} & z^{''} = z z^{'} \\
+     \implies & 2z^{''} = \left(2z\right)z^{'} \\
+     \implies & \frac{{d}\left(2z^{'}\right)}{{d}x} = \frac {{d}\left(z^{2}\right)} {{d}x}  \\
+     \implies & 2z^{'} = z^{2} + C \\
+\end{matrix}
+\]
+
+
+one case.
+\[
+\begin{matrix}
+ & C = 0 \\
+\implies & 2 \frac {{d}z} {{d}x} = z ^{2} \\
+\implies & \int \frac {2}{z^2} {d}z = \int {d}x \\
+\implies & -\frac{2}{z} = x - D  \left(\text{D is constant}\right)\\
+\implies & z =  \frac{2}{D -x} \\
+\implies & y^{'} = \frac{2}{D -x } \\
+\implies & y = E - 2ln\left(D-x\right) (\text{E is constant}) \\
+\end{matrix}
+\]
+
+the second case.
+\[
+& C \gtr 0 \\
+\implies & 2 \frac {{d}z} {{d}x} = z^{2} + C \\
+\implies & 2 \int \frac{1}{z^{2} + C} {d}z = \int {d}x \\
+
+\]
+
+\end{document}
