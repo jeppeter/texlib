@@ -31,16 +31,20 @@ one case.
 \implies & -\frac{2}{z} = x - D  \left(\text{D is constant}\right)\\
 \implies & z =  \frac{2}{D -x} \\
 \implies & y^{'} = \frac{2}{D -x } \\
-\implies & y = E - 2ln\left(D-x\right) (\text{E is constant}) \\
+\implies & y = E - 2\ln\left(D-x\right) (\text{E is constant}) \\
 \end{matrix}
 \]
 
 the second case.
 \[
-& C \gtr 0 \\
+\begin{matrix}
+ & C > 0 \\
 \implies & 2 \frac {{d}z} {{d}x} = z^{2} + C \\
 \implies & 2 \int \frac{1}{z^{2} + C} {d}z = \int {d}x \\
-
+\implies & 2\frac {\arctan\left( \frac {z}{\sqrt{C}} \right)} {\sqrt{C}} = x + D \left(\text{D is constant}\right) \\
+\implies & \arctan\left(\frac {z} {\sqrt{C} }  \right) = \frac {\sqrt{C}x + \sqrt{C}D}{2} \\
+\implies & z = \sqrt{C}\tan\left( \frac {\sqrt{C}x + \sqrt{C}D}{2} \right) \\
+\end{matrix}
 \]
 
 \end{document}
