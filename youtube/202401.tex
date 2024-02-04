@@ -14,17 +14,26 @@ Problem \[ \sum_{k \ge 1} \frac{\left (-1\right)^k}{k^{2} + \alpha^{2}}\]
 Problem \[ \sum_{k \ge 1} \frac{1}{\left(k^{2} + \alpha^{2}\right)^2}\]
 
 
+Solve:\\
+\text{Let suppose}
+\[
+\begin{matrix}
+ \lim\limits_{N \to \infty}\displaystyle\sum_{-N}^{N}f(k) = \displaystyle\sum_{-\infty}^{\infty} f(k)
+\end{matrix}
+\]
+
+
 \section{The Dirichlet Integral is destroyed by Feynman's Trick}
 \href{https://www.youtube.com/watch?v=ZZccxuOpb4k}{The Dirichlet Integral is destroyed by Feynman's Trick}
 
 Problem \[ \int_{0}^{\infty} \frac {sin\left(x\right)}{x} {d}x \]
 
-suppose \[ F\left(s\right) = \int_{0}^{\infty} e^{-sx}\frac{sin(x)}{x} {d}x\]  
+suppose \[ F\left(s\right) = \int_{0}^{\infty} e^{-sx}\frac{sin(x)}{x} {d}x\]
 \[
 \begin{matrix}
  F^{'}(s)  & = \int_{0}^{\infty} \frac{\partial}{\partial{s}} e^{-sx}\frac{sin(x)}{x} {d}x  \\
            & = \int_{0}^{\infty} -xe^{-sx} \frac{sin(x)}{x} {d}x  \\
-           & = \int_{0}^{\infty} -e^{-sx} sin(x) {d}x 
+           & = \int_{0}^{\infty} -e^{-sx} sin(x) {d}x
 \end{matrix}
 \]
 \end{document}
