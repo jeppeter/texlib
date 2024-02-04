@@ -33,7 +33,15 @@ suppose \[ F\left(s\right) = \int_{0}^{\infty} e^{-sx}\frac{sin(x)}{x} {d}x\]
 \begin{matrix}
  F^{'}(s)  & = \int_{0}^{\infty} \frac{\partial}{\partial{s}} e^{-sx}\frac{sin(x)}{x} {d}x  \\
            & = \int_{0}^{\infty} -xe^{-sx} \frac{sin(x)}{x} {d}x  \\
-           & = \int_{0}^{\infty} -e^{-sx} sin(x) {d}x
+           & = \int_{0}^{\infty} -e^{-sx} sin(x) {d}x \\
+           & = e^{-sx}\cos(x)\Big|_{0}^{\infty} + \int_{0}^{\infty}se^{-sx}\cos(x){d}x \\
+           & = -1 + \int_{0}^{\infty}se^{-sx}\cos(x){d}x \\
+           & = -1 + se^{-sx}\sin(x)\Big|_{0}^{\infty} + \int_{0}^{\infty}s^{2}e^{-sx}\sin(x){d}x \\
+           & = -1 + s^{2}\int_{0}^{\infty}e^{-sx}\sin(x){d}x \\           
+ \implies  & F^{'}(s) = -1 - s^{2}F^{'}(s) \\
+ \implies & F^{'}(s) = \frac {-1} {1+s^{2}} \\
+ \implies & F(s) = -\arctan(s) + C \\
+ \implies & \lim\limits_{s \to \infty} F(s) = \lim\limits_{s \to \infty}\left[-\arctan(s) + C\right] \\
 \end{matrix}
 \]
 \end{document}
