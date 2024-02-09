@@ -49,4 +49,35 @@ the second case.
 \end{matrix}
 \]
 
+\section{Easy and Hard Integral}
+\href{https://www.youtube.com/watch?v=o4TR62QvQJU}{Easy and Hard Integral}
+Solve Problem \\
+\[
+\begin{matrix}
+     & \int_0^{\frac{\pi}{4}} \ln\left(1 + \tan\left(x\right)\right){d}x  \\
+\implies &  I = \int_0^{\frac{\pi}{4}} \ln\left(1 + \tan\left(\frac{\pi}{4} - x\right)\right){d}x  
+  \left( \ \text{for king's rule}\ \int_a^b f(x){d} = \int_a^b f(a+b-x) {d}x \right) \\
+\implies & I = \int_0^{\frac{\pi}{4}} \ln\left( 1 + \frac{1 - \tan(x)}{1+ \tan(x)} \right) {d}x \\
+\implies & I = \int_0^{\frac{\pi}{4}} \ln\left(\frac {2}{1 + \tan(x)}\right) {d}x \\
+\implies & I = \int_0^{\frac{\pi}{4}} \ln2 {d}x - \int_0^{\frac{\pi}{4}} ln\left(1 + \tan(x)\right) {d}x \\
+\implies & 2I = \int_0^{\frac{\pi}{4}} \ln2 {d}x \\
+\implies & I = \frac{\ln2\pi}{8} \\
+
+\text{Solve Problem} \\
+ & \int_0^{\frac{\pi}{4}} \ln\left(1 - \tan\left(x\right)\right){d}x  \\
+\implies & I = \int_0^{\frac{\pi}{4}} \ln\left(1 - \tan\left(x\right)\right){d}x \\
+\implies & I = \int_0^{\frac{\pi}{4}} \ln\left(\frac {\cos(x) - \sin(x)}{\cos(x)}\right){d}x \\
+\implies & I = I_1 - I_2 \\
+\implies & I_1 = \int_0^{\frac{\pi}{4}} \ln\left(\cos(x) - \sin(x)\right){d}x \text{ } I_2 = \int_0^{\frac{\pi}{4}} \ln\left(\cos(x)\right){d}x \\
+\implies & I_1 = \int_0^{\frac{\pi}{4}} \ln\left(\sqrt{2}\left(\frac{1}{\sqrt{2} }\cos(x) - \frac{1}{\sqrt{2}}\sin(x)\right)\right){d}x \\
+\implies & I_1 = \int_0^{\frac{\pi}{4}} \ln(\sqrt{2}){d}x + \int_0^{\frac{\pi}{4}}\ln\left(\sin(\frac{\pi}{4} - x)\right){d}x\\
+\implies & I_1 = \ln2 \frac{\pi}{8} + \int_0^{\frac{\pi}{4}}\ln\left(\sin(x)\right){d}x \\
+\implies & I = I_1 + I_2 \\
+\implies & I = \ln2 \frac{\pi}{8} + \int_0^{\frac{\pi}{4}}\ln\left(\sin(x)\right){d}x - \int_0^{\frac{\pi}{4}} \ln\left(\cos(x)\right){d}x \\
+\implies & I = \ln2 \frac{\pi}{8} + \int_0^{\frac{\pi}{4}} \ln(\tan(x)){d}x \\
+\implies & P = \int_0^{\frac{\pi}{4}}\ln(\tan(x)){d}x = \int_0^{1} \frac{\ln(y)} {1 + y^2}{d}y \text{ } \left(y = \tan(x)\right) \\
+\implies & P = \displaystyle\Sigma_{k=0}^{\infty} \int_0^1(-1)^k \ln(y)y^{2k} {d}y \\
+\end{matrix}
+\]
+
 \end{document}
