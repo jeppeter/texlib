@@ -126,4 +126,29 @@ Solve Problem
  \implies & I = \frac {1 + \sqrt{5}} {2} \text { or } I = \frac {1 - \sqrt{5}} {2}  \\
 \end{matrix}
 \]
+
+\section{MIT Integration Bee 2024 Finals Problem 2}
+\href{https://www.youtube.com/watch?v=xdpKnkm2MT0}{MIT Integration Bee 2024 Finals Problem 2}
+
+
+
+Problem  \[ \int_0^{\infty} \frac {\ln\left(2e^{x} - 1\right)} {e ^ {x} - 1} {d}x = \frac{\pi^2} {4}\]
+
+Solve
+\[
+\begin{matrix}
+        & I = \int_0^{\infty} \frac{\ln\left(2e^{x} - 1\right)} {e^{x}-1}{d}x \\
+\implies & I \stackrel{u=e^{x}}{=} \int_1^{\infty} \frac{\ln\left(2u - 1\right)}{(u - 1)u} {d}u   \\
+\implies & I \stackrel{t = \frac{1}{u}}{=======} \int_0^{1} \frac{\ln(2-t) - \ln(t)}{1-t} * t * t (-1) {d}t \\
+\implies & I \stackrel {a = 1-t} {==============} \int_0^{1} \frac{\ln(1+a) - \ln(1-a)} {a} {d}a  \\
+\implies & I = \int_0^1 \frac{\left({\displaystyle\sum_{k=1}^{\infty}\frac{(-1)^{(k-1)}a ^k}{k} + \displaystyle\sum_{k=1}^{\infty}\frac{-a^k}{k}} \right)}{a} {d}a \\
+\implies & I = \int_0^1 \displaystyle\sum_{k=0}^{\infty} \frac{a^{2k}}{2k+1} {d}a \\
+\implies & I = \displaystyle\sum_{k=0}^{\infty} \frac{a^{2k+1}}{(2k+1)^2} \Big|_{a=0}^{a=1} \\
+\implies & I = \displaystyle\sum_{k=0}^{\infty} \frac{1} {(2k+1)^2} \\
+\implies & \zeta(2) = \displaystyle\sum_{k=1}^{\infty}\frac{1}{k^2} = \frac{\pi^2}{6} \\
+\implies & I = 2(\zeta(2) - \frac{\zeta(2)}{2^2}) = \frac{\pi^2}{4} \\
+\end{matrix}
+\]
+
+
 \end{document}
