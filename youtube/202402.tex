@@ -55,7 +55,7 @@ Solve Problem \\
 \[
 \begin{matrix}
      & \int_0^{\frac{\pi}{4}} \ln\left(1 + \tan\left(x\right)\right){d}x  \\
-\implies &  I = \int_0^{\frac{\pi}{4}} \ln\left(1 + \tan\left(\frac{\pi}{4} - x\right)\right){d}x  
+\implies &  I = \int_0^{\frac{\pi}{4}} \ln\left(1 + \tan\left(\frac{\pi}{4} - x\right)\right){d}x
   \left( \ \text{for king's rule}\ \int_a^b f(x){d} = \int_a^b f(a+b-x) {d}x \right) \\
 \implies & I = \int_0^{\frac{\pi}{4}} \ln\left( 1 + \frac{1 - \tan(x)}{1+ \tan(x)} \right) {d}x \\
 \implies & I = \int_0^{\frac{\pi}{4}} \ln\left(\frac {2}{1 + \tan(x)}\right) {d}x \\
@@ -77,6 +77,36 @@ Solve Problem \\
 \implies & I = \ln2 \frac{\pi}{8} + \int_0^{\frac{\pi}{4}} \ln(\tan(x)){d}x \\
 \implies & P = \int_0^{\frac{\pi}{4}}\ln(\tan(x)){d}x = \int_0^{1} \frac{\ln(y)} {1 + y^2}{d}y \text{ } \left(y = \tan(x)\right) \\
 \implies & P = \displaystyle\Sigma_{k=0}^{\infty} \int_0^1(-1)^k \ln(y)y^{2k} {d}y \\
+\end{matrix}
+\]
+
+\section{A beautifully symmetric double integral resulting in an important constant}
+\href{https://www.youtube.com/watch?v=MVgDeJaLcd0}{A beautifully symmetric double integral resulting in an important constant}
+
+Solve Problem \\
+\[
+    I = \displaystyle\int_0^{\frac{\pi}{2}}\int_0^{\frac{\pi}{2}} \frac{\sin(x) + \sin(y)}{\cos(x) + \cos(y)} {d}x{d}y \\
+\]
+
+\[
+\begin{matrix}
+    & I = I_1 + I_2 \\
+    & I_1 = \int_0^{\frac{\pi}{2}}\int_0^{\frac{\pi}{2}} \frac{\sin(x)}{\cos(x)+ \cos(y)}{d}x{d}y \\
+    & I_2 = \int_0^{\frac{\pi}{2}}\int_0^{\frac{\pi}{2}} \frac{\sin(y)}{\cos(x)+ \cos(y)}{d}y{d}x \\
+\implies & I = 2 * I_1 \\
+\implies & I = 2 \int_0^{\frac{\pi}{2}}\int_0^{\frac{\pi}{2}} \frac{\sin(x)}{\cos(x)+ \cos(y)}{d}x{d}y \\
+\implies & I = -2 \int_0^{\frac{\pi}{2}} \ln\left(\cos(x) + \cos(y)\right)\Big|_{x=0}^{x=\frac{\pi}{2}}{d}y \\
+\implies & I = -2 \int_0^{\frac{\pi}{2}} \ln\left(\cos(y)\right){d}y + 2 \int_0^{\frac{\pi}{2}}\ln\left(1 + \cos(y)\right){d}y \\
+\implies & I = K_1 + K_2 \\
+\implies & K_1 = 2 \int_0^{\frac{\pi}{2}}\ln\left(1 + \cos(y)\right){d}y \\
+\implies & K_2 = -2 \int_0^{\frac{\pi}{2}} \ln\left(\cos(y)\right){d}y \\
+\implies & K_1 = 2 \int_0^{\frac{\pi}{2}}\ln\left(2 \cos^2(\frac{y}{2})\right){d}y \text{   } \left( 2\cos^2(\frac{y}{2}) = 1 + \cos(y) \right) \\
+\implies & K_1 = 2 \int_0^{\frac{\pi}{2}} \ln2{d}y + 4 \int_0^{\frac{\pi}{2}}\ln\left(\cos(\frac{y}{2})\right){d}y \\
+\implies & K_1 = \pi\ln2  + 4 * Q_1 \text{   } Q_1 = \int_0^{\frac{\pi}{2}}\ln\left(\cos(\frac{y}{2})\right){d}y \\
+\implies & Q_1 = 2\int_0^{\frac{\pi}{4}}\ln\left(\cos(u)\right){d}u  \text{      } u = \frac{y}{2} \\
+\implies & \ln\left(\cos(u)\right) = -\ln2 + \displaystyle\sum_{k \ge 1}^{\infty} \frac{(-1)^{k+1}\cos(2ku)}{k} \text{ this is the taylor's expansion for }\ln(u) \\
+\implies & Q_1 = \int_0^{\frac{\pi}{4}}\left(-\ln2 + \displaystyle\sum_{k \ge 1}^{\infty} \frac{(-1)^{k+1}\cos(2ku)}{k}\right){d}u \\
+\implies & Q_1 = -\ln2 \frac{\pi}{4} + \displaystyle\sum_{N \ge 1}^{\infty}  \frac{(-1)^N}{(2N-1)^2} \text{ because}   \int_0^{\frac{\pi}{4}}\displaystyle\sum_{k \ge 1}^{\infty}\frac{(-1)^{k+1}\cos(2ku)}{k} = \displaystyle\sum_{k \ge 1}^{\infty}\frac{(-1)^{(k+2)}\sin(2ku)}{2k^2}\Big|_{u=0}^{u=\frac{\pi}{4}} \\
 \end{matrix}
 \]
 
