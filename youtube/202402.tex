@@ -150,5 +150,30 @@ Solve
 \end{matrix}
 \]
 
+\section{A Top G Integral}
+\href{https://www.youtube.com/watch?v=pwJOEQPfNfQ}{A Top G Integral}
+
+
+Problem  \[ I = \int_0^{\frac{1}{2}} \Gamma(1-x)\Gamma(1+x){d}x\]
+
+\[
+\begin{matrix}
+          &  \text{because of } \Gamma(1+x) = x \Gamma(x)  \\
+\implies  & I = \int_0^{\frac{1}{2}} \Gamma(1-x) x \Gamma(x){d}x \\
+          & \text{because of  } \Gamma(1-x)\Gamma(x) = \frac{\pi}{\sin(\pi x)} \\
+\implies  & I = \int_0^{\frac{1}{2}} \frac{\pi x}{\sin(\pi x)} {d}x \\
+\implies  & I \stackrel{u = \pi x} {=====} \frac{1}{\pi} \int_0^{\frac{\pi}{2}} \frac{u}{\sin(u)} {d}u \\
+\implies  & I = \frac{1}{\pi} \int_0^{\frac{\pi}{2}} \frac{\sin(u) u }{\sin^2(u)} {d}u \\
+\implies  & I = -\frac{1}{\pi} \int_0^{\frac{\pi}{2}} \frac{u}{1 - \cos^2(u)} {d}\cos(u) \\
+\implies  & I = -\frac{1}{2\pi} \int_0^{\frac{\pi}{2}} \left( \frac{u}{1-\cos(u)} + \frac{u}{1+\cos(u)} \right) {d}cos(u) \\
+\implies  & I = K_1 + K_2 \\
+          & K_1 = -\frac{1}{2\pi} \int_0^{\frac{\pi}{2}}  \frac{u}{1-\cos(u)} {d}\cos(u) \\
+          & K_2 = -\frac{1}{2\pi} \int_0^{\frac{\pi}{2}}  \frac{u}{1+\cos(u)} {d}\cos(u) \\
+\implies & K_1 = -\frac{1}{2\pi} \int_0^{\frac{\pi}{2}}  u {d}\ln(1-\cos(u)) \\
+         & K_1 = -\frac{1}{2\pi} \int_0^{\frac{\pi}{2}} \ln(1-\cos(u)){d}u \text{  because  } \ln(1-\cos(u)) u \Big|_0^{\frac{\pi}{2}} = 0\\
+\implies & K_2 = -\frac{1}{2\pi} \int_0^{\frac{\pi}{2}} \ln(1 + \cos(u)){d}u \text{  because } \ln(1+\cos(u)) u \Big|_0^{\frac{\pi}{2}} = 0 \\
+\implies & I = \frac{2\pi}{G} \\
+\end{matrix}
+\]
 
 \end{document}
