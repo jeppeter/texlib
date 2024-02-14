@@ -192,5 +192,29 @@ Solve
 \end{matrix}
 \]
 
+\section{A quick fascinating approach to the mellin transform of sin(x)}
+\href{https://www.youtube.com/watch?v=P5Wc6DxUciw}{A quick fascinating approach to the mellin transform of sin(x)}
+
+Problem 
+\[
+  I = \int_0^{\infty} x^{s-1}\sin(x){d}x  \text{    }  s \in \left(-1,1\right)
+\]
+
+Solve
+\[
+\begin{matrix}
+ Laplace Transform formula & \int_0^{\infty} f(x)g(x) {d}x = \int_0^{\infty} \mathcal{L}\{f\}\mathcal{L}^{-1}\{g\} {d}t \\
+\implies & I = \int_0^{\infty} \left(\sin(x)\right) \left(\frac{1}{x^{1-s}}\right) {d}x = \int_0^{\infty} \mathcal{L}\{\sin(x)\}\mathcal{L}\{\frac{1}{x^{1-s}}\}{d}t \\
+\implies & \mathcal{L}\{\sin(x)\}(t) = \frac{1}{1+t^2} \\
+\implies & \mathcal{L}^{-1}\{\frac{1}{x^{1-s}}\} = \frac{1}{\Gamma(1-s)} \mathcal{L}^{-1}\{\frac{\Gamma(1-s)}{x^{1-s}}\} = \frac{t^{-s}}{\Gamma(1-s)} \\
+\implies & I = \int_0^{\infty} \frac{1}{1+t^2} \frac{t^{-s}}{\Gamma(1-s)}{d}t = \frac{1}{\Gamma(1-s)} \int_0^{\infty} \frac{t^{-s}}{1+t^2} {d}t \\
+\implies & I \stackrel{u = t ^2}{==========} \frac{1}{2\Gamma(1-s)} \int_0^{\infty} \frac{u^{\frac{-s}{2}}  u ^{\frac{-1}{2}}}{(1+u)\sqrt{u}} {d}u \\
+\implies & I = \frac{1}{2\Gamma(1-s)} \int_0^{\infty} \frac{u^{\left(\frac{-(s+1)}{2}\right)}}{1+u}{d}u \\
+
+Theorem & \int_0^{\infty} \frac{u^{v-1}}{1+u} {d}u = \Gamma(v)\Gamma(1-v) = \pi\csc(\pi v) \\
+\implies & v = \frac{1-s}{2} \\
+\implies & I = \frac{1} {2 \Gamma(1-s)} \pi \csc(\frac{\pi}{2} - \frac{\pi s}{2}) \\
+\end{matrix}
+\]
 
 \end{document}
