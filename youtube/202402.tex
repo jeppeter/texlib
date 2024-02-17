@@ -251,5 +251,31 @@ Solve
 \end{matrix}
 \]
 
+\section{Incredible infinite series!}
+\href{https://www.youtube.com/watch?v=mL3ftmldMow}{Incredible infinite series!}
+
+Prove \[
+  \displaystyle\sum_{k \in \mathbb{Z}} \frac{1}{x + k\pi} = \cot x
+  \displaystyle\sum_{k \in \mathbb{Z}} \frac{(-1)^k}{x + k\pi} = \csc x
+\]
+
+
+Solve 
+\[
+\begin{matrix}
+  \text{Proved Theorem :  } & \frac{\sin(x)} {x} = \displaystyle\prod_{k \ge 1} \left(1 - \frac{x^2}{k^2\pi^2}\right) \\
+\Longleftrightarrow  & \ln\left( \frac{\sin(x)} {x} \right) = \ln\left(\displaystyle\prod_{k \ge 1} \left(1 - \frac{x^2}{k^2\pi^2}\right) \right) \\
+\Longleftrightarrow & \ln(\sin(x)) - \ln x = \displaystyle\sum_{k \ge 1} \ln\left(1 - \frac{x^2}{k^2\pi^2}\right) \\
+\implies & \left(\ln(\sin(x)) - \ln x \right)^{'} = \left(\displaystyle\sum_{k \ge 1} \ln\left(1 - \frac{x^2}{k^2\pi^2}\right)\right)^{'} \\
+\implies & \frac{\cos x}{\sin x} - \frac{1}{x} = \displaystyle\sum_{k \ge 1} \frac{-2 \frac{x}{k^2\pi^2}} { 1 - \frac{x^2}{k^2\pi^2}} \\
+\implies & \cot x - \frac{1}{x} = \displaystyle\sum_{k \ge 1} \frac{-2x}{k^2\pi^2 - x^2} \\
+\implies & \cot x - \frac{1}{x} = \displaystyle\sum_{k \ge 1} \frac{2x}{  x^2 - k^2\pi^2} \\
+\implies & \cot x - \frac{1}{x} = \displaystyle\sum_{k \ge 1} \frac{1}{  x - k\pi}  + \displaystyle\sum_{k \ge 1} \frac{1}{  x + k\pi} \\
+\implies & \cot x - \frac{1}{x} = \displaystyle\sum_{k \le -1} \frac{1}{  x + k\pi}  + \displaystyle\sum_{k \ge 1} \frac{1}{  x + k\pi} \\
+\text{proved  } & \cot x = \displaystyle\sum_{k \in \mathbb{Z}} \frac{1}{x + k\pi} \\
+
+\end{matrix}
+\]
+
 
 \end{document}
